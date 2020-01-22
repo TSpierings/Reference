@@ -2,7 +2,7 @@
   <div class="item"
     *ngFor="let month of months; let i = index"
     [style.transform]="getTransform(i)"
-    [class.selected-month]="selectedMonth !== undefined"
+    [class.selected-month]="isFocused"
     [class.selected]="selectedMonth === i"
     (click)="selectMonth(i)">
 
