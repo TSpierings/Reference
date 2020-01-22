@@ -1,0 +1,91 @@
+.container {
+  position: relative;
+  outline: 1px solid black;
+  margin: 20px;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+
+  .item {
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    
+    height: 500px;
+    width: 500px;
+
+    transition: transform 0.5s, top 0.5s, left 0.5s, height 0.5s, width 0.5s;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: lighten($color: black, $amount: 30);
+      cursor: pointer;
+    }
+
+    &.selected-month {
+      top: calc(180% - 250px);
+      left: calc(50% - 250px);
+
+      .calendar {
+        font-weight: unset;
+
+        .title {
+          font-size: 14px;
+        }
+
+        .days {
+          grid-gap: 2px;
+          margin: 2px;
+
+          .day {
+            span {
+              font-size: 14px;
+            }            
+          }
+        }
+      }
+    }
+
+    .calendar {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-weight: lighter;
+
+      &.hidden {
+        display: none;
+      }
+
+      .title {
+        color: white;
+        margin: 0 5px;
+        font-size: 48px;
+      }
+
+      .days {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(7, auto);
+        flex-grow: 1;
+        grid-gap: 4px;
+        margin: 4px;
+
+        .day {
+          display: flex;
+          color: black;
+          background-color: white;
+
+          span {
+            margin: 5px;
+            font-size: 48px;
+          }          
+        }
+      }
+    }
+  }
+}

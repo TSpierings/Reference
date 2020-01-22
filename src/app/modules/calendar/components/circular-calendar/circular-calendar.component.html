@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="item"
+    *ngFor="let month of months; let i = index"
+    [style.transform]="getTransform(i)"
+    [class.selected-month]="selectedMonth !== undefined"
+    [class.selected]="selectedMonth === i"
+    (click)="selectMonth(i)">
+
+    <div class="calendar">
+      <span class="title">{{month}}</span>
+      <div class="days">
+        <span class="day" *ngFor="let day of getDaysOfMonth(i)">
+          <span class="day-number">{{day + 1}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
