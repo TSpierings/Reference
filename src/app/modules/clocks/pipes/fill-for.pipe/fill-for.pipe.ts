@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FillForPipe implements PipeTransform {
 
   /**
-   * Generate an array the size of end-start, filled with index + start.
+   * Generate an array the size of end-start, filled with the index.
    */
   transform(start: number, end: number): Array<number> {
     if (end <= start) {

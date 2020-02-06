@@ -15,7 +15,7 @@ describe('FillForPipe', () => {
 
     // Assert
     expect(result.length).toBe(8);
-    for(let i = 2; i < 10; i++) {
+    for(let i = 0; i < 8; i++) {
       expect(result[i]).toBe(i);
     }
   });
