@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class TimeService {
 
+  private timeOffset = 0;
   private lastUpdate: number;
   private timeInSeconds = new Subject<Date>();
   private timeInMilliseconds = new Subject<Date>();
@@ -15,7 +16,7 @@ export class TimeService {
   }
 
   private update = () => {
-    const currentDate = new Date();
+    const currentDate = new Date(Date.now() + this.timeOffset);
 
     // Update every 'seconds' resolution subscriber.
     if (currentDate.valueOf() % 1000 < this.lastUpdate % 1000) {
@@ -28,11 +29,19 @@ export class TimeService {
     this.lastUpdate = currentDate.valueOf();
   }
 
-  get inSeconds(): Subject<Date> {
+  get InSeconds(): Subject<Date> {
     return this.timeInSeconds;
   }
 
-  get inMilliseconds(): Subject<Date> {
+  get InMilliseconds(): Subject<Date> {
     return this.timeInMilliseconds;
+  }
+
+  get Offset(): number {
+    return this.timeOffset;
+  }
+
+  public updateOffset(milliseconds: number) {
+    this.timeOffset = milliseconds;
   }
 }

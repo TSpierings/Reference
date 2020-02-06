@@ -11,7 +11,7 @@ export class SimpleClockComponent {
   public date = new Date();
 
   constructor(timeService: TimeService) {
-    timeService.inMilliseconds.subscribe(this.update);
+    timeService.InMilliseconds.subscribe(this.update);
   }
 
   private update = (date: Date) => {
