@@ -1,3 +1,6 @@
 <div class="container">
-  <div class="cell" *ngFor="let number of 0 | fillFor:12"></div>
+  <app-simple-clock class="cell"></app-simple-clock>
+  <div class="cell" *ngFor="let number of 1 | fillFor:12">
+    {{number}}
+  </div>
 </div>
