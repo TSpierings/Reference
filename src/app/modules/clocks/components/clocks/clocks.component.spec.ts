@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClocksComponent } from './clocks.component';
+import { FillForPipe } from '../../pipes/fill-for.pipe/fill-for.pipe';
 
 describe('ClocksComponent', () => {
   let component: ClocksComponent;
@@ -8,7 +9,7 @@ describe('ClocksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClocksComponent ]
+      declarations: [ ClocksComponent, FillForPipe ]
     })
     .compileComponents();
   }));
