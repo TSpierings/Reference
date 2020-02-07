@@ -6,9 +6,11 @@ import { SimpleClockComponent } from './components/simple-clock/simple-clock.com
 import { TimeService } from './services/time.service';
 import { ControlsComponent } from './components/controls/controls.component';
 import { KnobComponent } from './components/knob/knob.component';
+import { BinaryClockComponent } from './components/binary-clock/binary-clock.component';
+import { TimeInBitsPipe } from './pipes/time-in-bits.pipe/time-in-bits.pipe';
 
 @NgModule({
-  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent],
+  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent, BinaryClockComponent, TimeInBitsPipe],
   imports: [
     CommonModule
   ],

@@ -1,0 +1,24 @@
+<div class="binary-clock">
+  <div class="bit-places">
+    <div class="eight">8</div>
+    <div class="four">4</div>
+    <div class="two">2</div>
+    <div class="one">1</div>
+  </div>
+
+  <ng-container *ngFor="let bitArray of date | timeInBits; let column = index">
+    <div class="time-cell">
+      <div *ngFor="let bit of bitArray; let row = index"
+        [style.grid-row]="row + 1"
+        [style.grid-column]="column + 2"
+        [class.on]="bit">
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="time-places">
+    <div class="hours">hours</div>
+    <div class="minutes">minutes</div>
+    <div class="seconds">seconds</div>
+  </div>  
+</div>

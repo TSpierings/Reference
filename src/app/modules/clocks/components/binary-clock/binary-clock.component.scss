@@ -1,0 +1,66 @@
+.binary-clock {
+  display: grid;
+  grid-template-columns: 20px repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr) 30px;
+  grid-gap: 1px;
+  height: 100%;
+  color: white;
+
+  .bit-places {
+    display: contents;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      grid-column: 1;
+    }
+  
+    .one {
+      grid-row: 4;
+    }
+  
+    .two {
+      grid-row: 3;
+    }
+  
+    .four {
+      grid-row: 2;
+    }
+  
+    .eight {
+      grid-row: 1;
+    }
+  }
+
+  .time-places {
+    display: contents;
+
+    div {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      grid-row: 5;
+    }
+  
+    .hours {
+      grid-column: 2 / span 2;
+    }
+  
+    .minutes {
+      grid-column: 4 / span 2;
+    }
+  
+    .seconds {
+      grid-column: 6 / span 2;
+    }
+  }
+
+  .time-cell {
+    display: contents;
+
+    .on {
+      background-color: white;
+    }
+  }
+}

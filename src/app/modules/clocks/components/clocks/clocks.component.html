@@ -1,7 +1,8 @@
 <div class="container">
   <app-controls class="cell"></app-controls>
   <app-simple-clock class="cell"></app-simple-clock>
-  <div class="cell" *ngFor="let number of 2 | fillFor:12">
+  <app-binary-clock class="cell"></app-binary-clock>
+  <div class="cell" *ngFor="let number of 3 | fillFor:12">
     {{number}}
   </div>
 </div>
