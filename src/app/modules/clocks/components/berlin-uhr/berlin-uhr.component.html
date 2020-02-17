@@ -1,0 +1,19 @@
+<div class="berlin-uhr" *ngIf="date | berlinUhrTime as berlinUhr">
+  <div class="row">
+    <div class="indicator" [class.active]="!berlinUhr.even"></div>
+  </div>
+  <div class="row">
+    <div *ngFor="let index of 0 | fillFor:4" [class.active]="berlinUhr.hourMajor >= index + 1"></div>
+  </div>
+  <div class="row">
+    <div *ngFor="let index of 0 | fillFor:4" [class.active]="berlinUhr.hourMinor >= index + 1"></div>
+  </div>
+  <div class="row minute-major">
+    <div *ngFor="let index of 0 | fillFor:11" [class.active]="berlinUhr.minuteMajor >= index + 1">
+      <div class="marker"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let index of 0 | fillFor:4" [class.active]="berlinUhr.minuteMinor >= index + 1"></div>
+  </div>
+</div>

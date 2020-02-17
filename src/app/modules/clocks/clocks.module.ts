@@ -10,9 +10,11 @@ import { BinaryClockComponent } from './components/binary-clock/binary-clock.com
 import { TimeInBitsPipe } from './pipes/time-in-bits.pipe/time-in-bits.pipe';
 import { FibonacciClockComponent } from './components/fibonacci-clock/fibonacci-clock.component';
 import { FibonacciTimeStatePipe } from './pipes/fibonacci-time-state.pipe/fibonacci-time-state.pipe';
+import { BerlinUhrComponent } from './components/berlin-uhr/berlin-uhr.component';
+import { BerlinUhrTimePipe } from './pipes/berlin-uhr-time.pipe/berlin-uhr-time.pipe';
 
 @NgModule({
-  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent, BinaryClockComponent, TimeInBitsPipe, FibonacciClockComponent, FibonacciTimeStatePipe],
+  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent, BinaryClockComponent, TimeInBitsPipe, FibonacciClockComponent, FibonacciTimeStatePipe, BerlinUhrComponent, BerlinUhrTimePipe],
   imports: [
     CommonModule
   ],
