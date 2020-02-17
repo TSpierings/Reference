@@ -8,9 +8,11 @@ import { ControlsComponent } from './components/controls/controls.component';
 import { KnobComponent } from './components/knob/knob.component';
 import { BinaryClockComponent } from './components/binary-clock/binary-clock.component';
 import { TimeInBitsPipe } from './pipes/time-in-bits.pipe/time-in-bits.pipe';
+import { FibonacciClockComponent } from './components/fibonacci-clock/fibonacci-clock.component';
+import { FibonacciTimeStatePipe } from './pipes/fibonacci-time-state.pipe/fibonacci-time-state.pipe';
 
 @NgModule({
-  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent, BinaryClockComponent, TimeInBitsPipe],
+  declarations: [ClocksComponent, FillForPipe, SimpleClockComponent, ControlsComponent, KnobComponent, BinaryClockComponent, TimeInBitsPipe, FibonacciClockComponent, FibonacciTimeStatePipe],
   imports: [
     CommonModule
   ],

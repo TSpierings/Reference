@@ -2,7 +2,8 @@
   <app-controls class="cell"></app-controls>
   <app-simple-clock class="cell"></app-simple-clock>
   <app-binary-clock class="cell"></app-binary-clock>
-  <div class="cell" *ngFor="let number of 3 | fillFor:12">
+  <app-fibonacci-clock class="cell"></app-fibonacci-clock>
+  <div class="cell" *ngFor="let number of 4 | fillFor:12">
     {{number}}
   </div>
 </div>

@@ -1,0 +1,43 @@
+.fibonacci-clock {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+
+  div {
+    display: flex;
+  }
+
+  .hour {
+    background-color: darken($color: white, $amount: 90);
+  }
+
+  .minute {
+    background-color: darken($color: white, $amount: 60);
+  }
+
+  .both {
+    background-color: white;
+  }
+
+  .five, .three, .two, .one {
+    flex: 1.618;
+  }
+
+  >.split {
+    flex: 1;
+    flex-direction: column-reverse;
+    margin-right: 1px;
+
+    >.split {
+      flex: 1;
+      flex-direction: row;
+      margin-bottom: 1px;
+
+      >.split {
+        flex: 1;
+        flex-direction: column;
+        margin-left: 1px;
+      }
+    }
+  }
+}
