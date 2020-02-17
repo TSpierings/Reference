@@ -8,18 +8,18 @@
   }
 
   .hour {
-    background-color: darken($color: white, $amount: 90);
+    background: linear-gradient(to left top, white 0 50%, black 50% 100%);
   }
 
   .minute {
-    background-color: darken($color: white, $amount: 60);
+    background: linear-gradient(to right bottom, white 0 50%, black 50% 100%);
   }
 
   .both {
     background-color: white;
   }
 
-  .five, .three, .two, .one {
+  .five, .three, .two, .one-first {
     flex: 1.618;
   }
 
@@ -37,6 +37,10 @@
         flex: 1;
         flex-direction: column;
         margin-left: 1px;
+
+        .one-second {
+          flex: 1;
+        }
       }
     }
   }
